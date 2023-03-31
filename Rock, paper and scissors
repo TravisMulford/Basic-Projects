@@ -1,0 +1,53 @@
+#A game of rock, paper and scissors.
+#Rock beats scissors, paper beats rock, and scissors beats paper.
+
+import random
+
+#Needed for random integer generation.
+
+while True:
+    playerChoice = input('Can you beat me in a game of rock, paper and scissors?\nEnter your choice below:\n')
+
+#This gathers player input.
+
+    compChoice = random.randint(1, 3)
+
+    if compChoice == 1:
+        compChoice = 'Rock'
+
+    elif compChoice == 2:
+        compChoice = 'Paper'
+
+    else:
+        compChoice = 'Scissors'
+
+    print('Computer chooses:', compChoice + ".")
+
+#This gives the computer a random integer assigned to rock, paper or scissors.
+
+    if playerChoice.lower() not in ('rock', 'paper', 'scissors'):
+        print('Invalid choice. Please choose from "rock", "raper" or "scissors".')
+    else:
+    
+        if playerChoice.lower() == compChoice.lower():
+            print('Tie!')
+        elif playerChoice.lower() == 'rock' and compChoice.lower() == 'paper':
+            print('Computer wins!')
+        elif playerChoice.lower() == 'paper' and compChoice.lower() == 'scissors':
+            print('Computer wins!')
+        elif playerChoice.lower() == 'scissors' and compChoice.lower() == 'rock':
+            print('Computer wins!')
+        else:
+            print('You win!')
+
+#This is how the game is played and a winner chosen if applicable.
+
+    playAgain = input("If you'd like to try again, enter 'yes' below, otherwise enter anything else.\n")
+    if playAgain.lower() != 'yes':
+        break
+
+#I added this to be able to play again if desired.
+
+print('Thank you for playing!')
+
+#Finally, once the while loop is finished, a thank you for playing is displayed.
