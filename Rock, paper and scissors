@@ -1,4 +1,4 @@
-#A game of rock, paper and scissors.
+#A game of rock, paper and scissors in Python.
 #Rock beats scissors, paper beats rock, and scissors beats paper.
 
 import random
